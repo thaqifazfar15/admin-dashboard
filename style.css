@@ -37,6 +37,11 @@ body {
     "nav main main main";
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .grid {
   display: grid;
 }
@@ -58,7 +63,7 @@ body {
 nav {
   background-color: var(--byzantium);
   grid-area: nav;
-  z-index: -1;
+  z-index: 1;
   padding: 1em;
   font-weight: bold;
   color: white;
@@ -66,14 +71,38 @@ nav {
 
 .logo-container {
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .logo-container > img {
   width: 4em;
+  margin-right: 0.6em;
 }
 
 .logo-container > span {
   font-size: 2em;
+}
+
+nav ul {
+  padding: 1.3em;
+}
+
+nav ul li {
+  margin-bottom: 1.4em;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1.6em;
+}
+
+nav ul li a svg {
+  width: 1.4em;
+}
+
+nav ul li span {
+  font-size: 1.4em;
 }
 
 /*----x----  Navigation Bar  ----x----*/
