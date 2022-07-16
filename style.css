@@ -29,7 +29,7 @@ body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
   width: 100vw;
-  grid-template: 250px repeat(3, 1fr) / 350px repeat(3, 1fr);
+  grid-template: min(240px) repeat(3, 1fr) / minmax(270px, 20%) repeat(3, 1fr);
   grid-template-areas:
     "nav header header header"
     "nav main main main"
@@ -113,10 +113,69 @@ header {
   background-color: white;
   grid-area: header;
   z-index: 1;
-  padding: 1em 2em;
+  padding: 2em 3em 0em 3em;
   box-shadow: 0px 8px 18px -8px rgba(0, 0, 0, 0.3);
-  grid-template: 4fr 6fr / 6fr 4fr;
+  grid-template: 1fr 2fr / minmax(700px, 9fr) 4fr;
 }
+
+header .search-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  height: fit-content;
+  width: max(80%, 20rem);
+}
+
+header .search-container svg {
+  width: 1.3em;
+}
+
+header .search-container input {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--kobi);
+  padding: 1em;
+}
+
+header .profile-photo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  height: fit-content;
+  align-self: center;
+  margin-bottom: 1em;
+}
+
+header .profile-photo-container img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+
+header .profile-photo-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header .profile-photo-container div span {
+  font-weight: 500;
+}
+
+header .profile-photo-container div p {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.github-logo-container svg {
+  width: 1.4em;
+}
+
 /*----x----  Header  ----x----*/
 
 /*---------  Main Section  ---------*/
