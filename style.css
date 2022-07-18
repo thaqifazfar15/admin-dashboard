@@ -56,6 +56,14 @@ a {
   flex-direction: column;
 }
 
+.btn {
+  outline: none;
+  border: none;
+  width: 6.4em;
+  height: 3.4rem;
+  border-radius: 50em;
+}
+
 /*----x----  Global Class  ----x----*/
 
 /*---------  Navigation Bar  ---------*/
@@ -113,9 +121,14 @@ header {
   background-color: white;
   grid-area: header;
   z-index: 1;
-  padding: 2em 3em 0em 3em;
+  padding: 2em 6em 0em 3em;
   box-shadow: 0px 8px 18px -8px rgba(0, 0, 0, 0.3);
-  grid-template: 1fr 2fr / minmax(700px, 9fr) 4fr;
+  grid-template: 1fr 2fr / minmax(650px, 9fr) minmax(150px, 4fr);
+  align-items: center;
+}
+
+header > div {
+  margin-bottom: 1em;
 }
 
 header .search-container {
@@ -148,7 +161,6 @@ header .profile-photo-container {
   gap: 24px;
   height: fit-content;
   align-self: center;
-  margin-bottom: 1em;
 }
 
 header .profile-photo-container img {
@@ -172,8 +184,57 @@ header .profile-photo-container div p {
   font-weight: bold;
 }
 
+.github-logo-container {
+  display: flex;
+  gap: 2em;
+  justify-self: flex-end;
+  font-weight: bold;
+}
+
 .github-logo-container svg {
-  width: 1.4em;
+  width: 1.7em;
+}
+
+.github-logo-container .github-logo {
+  color: black;
+  width: 3em;
+}
+
+.github-logo-container span {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+.github-logo-container svg:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.github-logo:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.github-logo-container span:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.action-btn-container {
+  display: flex;
+  margin-left: auto;
+  gap: 1.3em;
+}
+
+.action-btn-container > .btn {
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: var(--byzantium);
+  color: white;
+}
+
+.action-btn-container > .btn:hover {
+  background-color: var(--tyrian-purple);
 }
 
 /*----x----  Header  ----x----*/
