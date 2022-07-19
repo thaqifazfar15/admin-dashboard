@@ -29,7 +29,7 @@ body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
   width: 100vw;
-  grid-template: min(220px) repeat(3, 1fr) / 20% repeat(3, 1fr);
+  grid-template: min(15vw, 230px) repeat(3, 1fr) / 20% repeat(3, 1fr);
   grid-template-areas:
     "nav header header header"
     "nav main main main"
@@ -61,8 +61,8 @@ a {
   outline: none;
   border: none;
   width: 7.4em;
-  height: 3.4rem;
-  border-radius: 50em;
+  height: 3.4em;
+  border-radius: 50rem;
 }
 
 /*----x----  Global Class  ----x----*/
@@ -77,8 +77,9 @@ nav {
   font-weight: bold;
   color: white;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  font-size: clamp(0.6em, 1vw, 1em);
 }
 
 .logo-container {
@@ -129,6 +130,8 @@ header {
   box-shadow: 0px 8px 18px -8px rgba(0, 0, 0, 0.3);
   grid-template: 1fr 2fr / minmax(650px, 9fr) minmax(150px, 4fr);
   align-items: center;
+
+  font-size: clamp(0.6em, 1vw, 1em);
 }
 
 header > div {
@@ -168,8 +171,8 @@ header .profile-photo-container {
 }
 
 header .profile-photo-container img {
-  height: 6rem;
-  width: 6rem;
+  height: 6em;
+  width: 6em;
   border-radius: 50%;
 }
 
