@@ -27,7 +27,7 @@ font-family: 'Roboto', sans-serif;
 
 body {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   grid-template: min(240px) repeat(3, 1fr) / minmax(270px, 20%) repeat(3, 1fr);
   grid-template-areas:
@@ -59,7 +59,7 @@ a {
 .btn {
   outline: none;
   border: none;
-  width: 6.4em;
+  width: 7.4em;
   height: 3.4rem;
   border-radius: 50em;
 }
@@ -71,10 +71,13 @@ a {
 nav {
   background-color: var(--byzantium);
   grid-area: nav;
-  z-index: 1;
+  z-index: 0;
   padding: 1em;
   font-weight: bold;
   color: white;
+  position: absolute;
+  height: 100%;
+  width: 30em;
 }
 
 .logo-container {
@@ -189,6 +192,8 @@ header .profile-photo-container div p {
   gap: 2em;
   justify-self: flex-end;
   font-weight: bold;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .github-logo-container svg {
@@ -222,7 +227,7 @@ header .profile-photo-container div p {
 
 .action-btn-container {
   display: flex;
-  margin-left: auto;
+  justify-self: flex-end;
   gap: 1.3em;
 }
 
@@ -245,6 +250,35 @@ main {
   background-color: rgb(232, 232, 232);
   grid-area: main;
   z-index: 0;
+  grid-template: 1fr 1fr 1fr / 2fr 2fr 1fr;
+  padding: 3em 2em;
+}
+
+main > article {
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+main > aside {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+main > article > span,
+main > aside > * > span {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+main > aside {
+  display: grid;
+}
+
+main > aside > div > div {
+  display: flex;
+  background-color: white;
+  height: 80%;
+  width: 100%;
+  border-radius: 12px;
 }
 
 /*----x----  Main Section  ----x----*/
