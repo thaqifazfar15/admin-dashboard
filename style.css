@@ -296,24 +296,60 @@ main > aside {
 main > aside > div > div {
   display: flex;
   background-color: white;
-  height: 80%;
+  min-height: 18em;
   width: 100%;
   border-radius: 12px;
   gap: 1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin-bottom: 1em;
 }
 
 main > article > div.project-container {
-  min-height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-  padding: 1em 2em 1em 0;
+  gap: 2em;
+  padding: 1em 4.5em 1em 0;
 }
 
 main > article > div.project-container > div {
-  border: 1px solid black;
+  background-color: white;
   height: 300px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
 }
+
+.project-container > .cards > .color-label {
+  height: 100%;
+  width: 3.3%;
+  border-radius: 12px 0 0 12px;
+  background-color: var(--tyrian-purple)
+}
+
+.cards > .card-text {
+  width: 96%;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text span:first-of-type {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 6px;
+}
+
+.card-icons {
+  margin-top: auto;
+  margin-left: auto;
+  display: flex;
+  gap: 1.2em;
+}
+
+.card-icons > * {
+  cursor: pointer;
+}
+
+
 
 /*----x----  Main Section  ----x----*/
