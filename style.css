@@ -296,12 +296,77 @@ main > aside {
 main > aside > div > div {
   display: flex;
   background-color: white;
-  min-height: 18em;
+  min-height: 16em;
   width: 100%;
   border-radius: 12px;
   gap: 1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin-bottom: 1em;
+  padding: 2rem 2rem;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.todo-container div:last-of-type {
+  border-bottom: none;
+}
+
+.todo-container > div, .socmed-container > div {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 0 1em 0.5em;
+}
+
+.socmed-container{
+  padding: 1.5em 2em 1em 2em !important;
+}
+
+.todo-container div h3 {
+  margin-bottom: 0.2em;
+}
+
+.todo-container div span {
+  color:rgba(0, 0, 0, 0.6)
+}
+.socmed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 10em;
+}
+
+.socmed-container div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.socmed-container div:last-of-type {
+  border-bottom: none;
+}
+
+.socmed-container > div:nth-child(2) > svg{
+  aspect-ratio: 1;
+  height: 30px;
+  margin-left: -10px;
+}
+
+.socmed-container > div:nth-child(2) > span {
+  margin-left: -8px;
+}
+
+.socmed-container > div:nth-child(3) > svg{
+  aspect-ratio: 1;
+  height: 30px;
+  margin-left: 1px;
+  margin-right: 5px;
 }
 
 main > article > div.project-container {
@@ -313,7 +378,7 @@ main > article > div.project-container {
 
 main > article > div.project-container > div {
   background-color: white;
-  height: 300px;
+  height: 250px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
@@ -337,7 +402,7 @@ main > article > div.project-container > div {
 
 .cards > .card-text {
   width: 96%;
-  padding: 2rem 2.5em;
+  padding: 2em 2em 2em 2.5em;
   display: flex;
   flex-direction: column;
 }
@@ -358,7 +423,5 @@ main > article > div.project-container > div {
 .card-icons > * {
   cursor: pointer;
 }
-
-
 
 /*----x----  Main Section  ----x----*/
